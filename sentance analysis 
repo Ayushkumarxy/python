@@ -1,0 +1,35 @@
+text = input("Enter a sentence: ")
+vowels = "aeiouAEIOU"
+
+characters = vowels_count = consonants = 0
+digits = spaces = special = 0
+uppercase = lowercase = 0
+
+for char in text:
+    characters += 1
+
+    if char.isalpha():
+        if char in vowels:
+            vowels_count += 1
+        else:
+            consonants += 1
+
+        if char.isupper():
+            uppercase += 1
+        if char.islower():
+            lowercase += 1
+    elif char.isdigit():
+        digits += 1
+    elif char.isspace():
+        spaces += 1
+    else:
+        special += 1
+
+print("Characters:", characters)
+print("Vowels:", vowels_count)
+print("Consonants:", consonants)
+print("Digits:", digits)
+print("Spaces:", spaces)
+print("Special characters:", special)
+print("Uppercase:", uppercase)
+print("Lowercase:", lowercase)
